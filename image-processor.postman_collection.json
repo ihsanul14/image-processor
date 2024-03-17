@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "b12b450b-4c55-42ed-b773-adeb814badc6",
+		"name": "image-processor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9850732"
+	},
+	"item": [
+		{
+			"name": "Convert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30001/api/image/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30001",
+					"path": [
+						"api",
+						"image",
+						"convert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/user/Downloads/2024 Take Home Test - Set 2/faulty-employees.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:30001/api/image/resize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30001",
+					"path": [
+						"api",
+						"image",
+						"resize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Compress",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/user/Pictures/Screenshots/Screenshot from 2024-02-22 11-26-10.png"
+						},
+						{
+							"key": "quality",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:30001/api/image/compress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30001",
+					"path": [
+						"api",
+						"image",
+						"compress"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
